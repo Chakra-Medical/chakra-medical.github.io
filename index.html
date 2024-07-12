@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    </head>
+    <title>Cosmic Pathways Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css" />
+</head>
 <body>
+    <header>
+        </header>
+
     <main>
+        <section id="hero">
+            <h1>Embark on a Journey of Self-Discovery</h1>
+            <button class="snipcart-checkout">View Cart</button> 
+        </section>
+
         <section id="featured-books">
+            <h2>Featured Books</h2>
             <div class="book-card">
+                <img src="astrology-book-cover.jpg" alt="Astrological Elements & Personalities">
+                <h3>Astrological Elements & Personalities</h3>
+                <p>Unveil the cosmic influence on human nature.</p>
                 <button class="snipcart-add-item"
                     data-item-id="book1"
-                    </button>
+                    data-item-price="PRICE"
+                    data-item-url="https://chakra-medical.github.io/shop.html"
+                    data-item-description="Unveil the cosmic influence on human nature."
+                    data-item-image="astrology-book-cover.jpg"
+                    data-item-name="Astrological Elements & Personalities">
+                    Add to Cart
+                </button>
             </div>
+
+            </section>
+
+        <section id="about-us">
+            <h2>About Us</h2>
+            </section>
+
+        <section id="new-releases">
+            <h2>New Releases/Coming Soon</h2>
+            </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
             </section>
     </main>
+
+    <footer>
+        </footer>
+
+    <script src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
+    <script>
+        // Snipcart configuration
+        Snipcart.api.configure('YOUR_API_KEY');
+    </script>
 </body>
 </html>
