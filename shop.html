@@ -3,29 +3,46 @@
 <head>
     <title>My Awesome Bookshop</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to My Awesome Bookshop</h1>
+    <header>
+        <h1>Welcome to My Awesome Bookshop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                </ul>
+        </nav>
+    </header>
 
-    <div id="book-list"></div>
+    <main>
+        <div id="book-list"></div>
+    </main>
 
+    <footer>
+        <p>&copy; 2023 My Awesome Bookshop</p>
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script> 
     <script src="script.js"></script>
     <script>
-        const isbnList = [
-            'B0D583RQYT',
-            'B0CTHPX7B6',
-            'B0CBCL32JY',
-            'B0CB358RWC',
-            'B0CB5PKYYG',
-            'B0D52HK77J',
-            'B0CMKGB9VZ',
-            'B0CQ1QS8RC',
-            'B0CNWPPGXG',
-            'B0CB7X3KX3'
+        const bookList = [
+            { isbn: 'B0D583RQYT', priceId: 'your_price_id_for_B0D583RQYT' }, // Example with just ISBN and priceId
+            { isbn: 'B0CTHPX7B6', priceId: 'your_price_id_for_B0CTHPX7B6' },
+            { isbn: 'B0CBCL32JY', priceId: 'your_price_id_for_B0CBCL32JY' },
+            { isbn: 'B0CB358RWC', priceId: 'your_price_id_for_B0CB358RWC' },
+            { isbn: 'B0CB5PKYYG', priceId: 'your_price_id_for_B0CB5PKYYG' },
+            { isbn: 'B0D52HK77J', priceId: 'your_price_id_for_B0D52HK77J' },
+            { isbn: 'B0CMKGB9VZ', priceId: 'your_price_id_for_B0CMKGB9VZ' },
+            { isbn: 'B0CQ1QS8RC', priceId: 'your_price_id_for_B0CQ1QS8RC' },
+            { isbn: 'B0CNWPPGXG', priceId: 'your_price_id_for_B0CNWPPGXG' },
+            { isbn: 'B0CB7X3KX3', priceId: 'your_price_id_for_B0CB7X3KX3' }
         ];
 
-        isbnList.forEach(isbn => {
-            createBookElement(isbn);
+        bookList.forEach(book => {
+            createBookElement(book);
         });
     </script>
 </body>
