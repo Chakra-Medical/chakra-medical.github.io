@@ -1,0 +1,58 @@
+/* General Styles */
+body {
+    font-family: sans-serif; /* Choose your preferred font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+header, footer {
+    background-color: #f0f0f0; /* Example background color */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('path/to/your/starry-night-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ensure text is visible on the image */
+    text-align: center;
+    padding: 4rem 0; /* Adjust padding as needed */
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Featured Books Section */
+#featured-books {
+    display: grid; /* Use grid or flexbox for layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 2rem;
+}
+
+.book-card {
+    border: 1px solid #ddd; /* Subtle border */
+    padding: 1rem;
+}
+
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* About Us, New Releases, Testimonials */
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ... Add more styles for other sections (footer, navigation, etc.) */
