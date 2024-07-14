@@ -1,5 +1,5 @@
 // Initialize Stripe
-const stripe = Stripe('YOUR_PUBLISHABLE_KEY'); // Replace with your publishable key
+const stripe = Stripe('pk_live_51Jg4iDFHmzmMEexQybICE2HBSyn48G9Q7R23klfOD4ZSyYhmluPnViqutRRT8YWKDalyZGsiCiuhfKtYFCyLt6RQ00OrXciAKe'); // Replace with your publishable key
 
 // Handle checkout for each book
 const checkoutButton1 = document.getElementById('checkout-button-book1');
