@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shop - Cosmic Pathways Bookstore</title>
+    <title>My Awesome Bookshop</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css" />
 </head>
 <body>
-    <header>
-        </header>
+    <h1>Welcome to My Awesome Bookshop</h1>
 
-    <main>
-        <section id="book-list">
-            <h2>Our Cosmic Collection</h2>
-            </section>
-    </main>
+    <div id="book-list"></div>
 
-    <footer>
-        </footer>
-
-    <script src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
+    <script src="script.js"></script>
     <script>
-        // Snipcart configuration
-        Snipcart.api.configure('YOUR_API_KEY');
+        const isbnList = [
+            'B0D583RQYT',
+            'B0CTHPX7B6',
+            'B0CBCL32JY',
+            'B0CB358RWC',
+            'B0CB5PKYYG',
+            'B0D52HK77J',
+            'B0CMKGB9VZ',
+            'B0CQ1QS8RC',
+            'B0CNWPPGXG',
+            'B0CB7X3KX3'
+        ];
+
+        isbnList.forEach(isbn => {
+            createBookElement(isbn);
+        });
     </script>
 </body>
 </html>
