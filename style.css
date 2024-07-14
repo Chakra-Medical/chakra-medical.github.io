@@ -1,58 +1,83 @@
 /* General Styles */
 body {
-    font-family: sans-serif; /* Choose your preferred font */
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Adjust line height for readability */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-header, footer {
-    background-color: #f0f0f0; /* Example background color */
+header {
+    background-color: #007bff; /* Blue background */
+    color: white;
     padding: 1rem 0;
     text-align: center;
 }
 
+h1 {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 main {
-    padding: 2rem;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Hero Section */
-#hero {
-    background-image: url('path/to/your/starry-night-image.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    color: white; /* Ensure text is visible on the image */
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 4rem 0; /* Adjust padding as needed */
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-#hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+/* Product Card Styles */
+.product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
 }
 
-/* Featured Books Section */
-#featured-books {
-    display: grid; /* Use grid or flexbox for layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 2rem;
-}
-
-.book-card {
-    border: 1px solid #ddd; /* Subtle border */
-    padding: 1rem;
-}
-
-.book-card img {
+.product img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
-/* About Us, New Releases, Testimonials */
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+.product h2 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 5px;
 }
 
-/* ... Add more styles for other sections (footer, navigation, etc.) */
+.product button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
