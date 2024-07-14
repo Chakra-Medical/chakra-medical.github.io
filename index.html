@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cosmic Pathways Bookstore</title>
+    <title>Chakra Medical</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://js.stripe.com/v3/"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        </header>
+        <h1>Welcome to My Awesome Bookshop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                </ul>
+        </nav>
+    </header>
 
     <main>
-        <section id="featured-books">
-            <h2>Featured Books</h2>
-            <div class="book-card">
-                <img src="astrology-book-cover.jpg" alt="Astrological Elements & Personalities">
-                <h3>Astrological Elements & Personalities</h3>
-                <p>Unveil the cosmic influence on human nature.</p>
-                <button id="checkout-button-book1">Buy Now</button>
-            </div>
-            </section>
-
-        </main>
+        <div id="book-list"></div>
+    </main>
 
     <footer>
-        </footer>
+        <p>&copy; 2023 Chakra Medical</p>
+    </footer>
 
-    <script src="script.js"></script> 
+    <script src="https://js.stripe.com/v3/"></script> 
+    <script src="script.js"></script>
+    <script>
+        const isbnList = [
+            'B0D583RQYT',
+            'B0CTHPX7B6',
+            'B0CBCL32JY',
+            'B0CB358RWC',
+            'B0CB5PKYYG',
+            'B0D52HK77J',
+            'B0CMKGB9VZ',
+            'B0CQ1QS8RC',
+            'B0CNWPPGXG',
+            'B0CB7X3KX3'
+        ];
+
+        isbnList.forEach(isbn => {
+            createBookElement(isbn);
+        });
+    </script>
 </body>
 </html>
+
