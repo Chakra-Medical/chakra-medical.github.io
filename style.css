@@ -16,8 +16,8 @@ header .container {
   align-items: center;
 }
 
-header h1 {
-  margin: 0;
+header .logo {
+  max-height: 100px;
 }
 
 nav ul {
@@ -50,6 +50,13 @@ nav ul li a {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
 }
 
 .books .book {
