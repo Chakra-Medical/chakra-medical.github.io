@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #006400; /* Dark green color */
+  background-color: #334462; /* Exact color from the logo */
   color: #fff;
   padding: 1em 0;
 }
@@ -18,11 +18,11 @@ header .container {
 }
 
 header .logo {
-  max-height: 250px;
+  max-height: 100px;
 }
 
 .menu-button {
-  background-color: #006400; /* Dark green color */
+  background-color: #334462; /* Exact color from the logo */
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -31,7 +31,7 @@ header .logo {
 }
 
 .menu-button:hover {
-  background-color: #004d00; /* Slightly lighter green for hover */
+  background-color: #2b3853; /* Slightly darker shade for hover */
 }
 
 nav ul {
@@ -53,11 +53,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #004d00; /* Slightly lighter green for hover */
+  background-color: #2b3853; /* Slightly darker shade for hover */
 }
 
 .hero {
-  background-color: #008080; /* Teal color */
+  background-color: #334462; /* Match hero section as well */
   color: #fff;
   padding: 50px 0;
   text-align: center;
@@ -114,14 +114,14 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #006400; /* Dark green color */
+  background-color: #334462; /* Exact color from the logo */
   color: #fff;
   text-align: center;
   padding: 1em 0;
 }
 
 button {
-  background-color: #006400; /* Dark green color */
+  background-color: #334462; /* Exact color from the logo */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -131,7 +131,7 @@ button {
 }
 
 button:hover {
-  background-color: #004d00; /* Slightly lighter green for hover */
+  background-color: #2b3853; /* Slightly darker shade for hover */
 }
 
 @media (max-width: 768px) {
@@ -145,7 +145,7 @@ button:hover {
     display: none;
   }
 
-  nav ul.active {
+  nav.active ul {
     display: flex;
   }
 
