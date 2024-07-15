@@ -43,7 +43,7 @@ nav ul li a {
   text-align: center;
 }
 
-.about, .books {
+.about, .books, .astrology {
   padding: 50px 0;
 }
 
@@ -52,23 +52,18 @@ nav ul li a {
   margin: 0 auto;
 }
 
-.about-image {
+.about-image, .astro img, .books .book img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 20px auto;
 }
 
-.books .book {
+.books .book, .astrology .astro {
   border: 1px solid #ccc;
   padding: 16px;
   margin: 16px 0;
   text-align: center;
-}
-
-.books .book img {
-  max-width: 100px;
-  margin-bottom: 16px;
 }
 
 footer {
