@@ -100,3 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
   showAstroSlide(currentAstroSlide);
   setInterval(nextAstroSlide, 3000); // Change slide every 3 seconds
 });
+
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+}
