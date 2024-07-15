@@ -15,6 +15,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 header .logo {
@@ -40,6 +41,19 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  position: absolute;
+  bottom: -120px; /* Adjust based on your menu height */
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  display: none;
+  transition: bottom 0.3s ease;
+}
+
+nav ul.active {
+  display: flex;
+  bottom: 60px; /* Adjust based on your menu height */
 }
 
 nav ul li {
@@ -122,7 +136,7 @@ footer {
 }
 
 button {
-  background-color: #57CBAB; /* Exact color from the logo */
+  background-color: #334462; /* Exact color from the logo */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -142,7 +156,7 @@ button:hover {
 
   nav ul {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     display: none;
   }
 
@@ -151,7 +165,7 @@ button:hover {
   }
 
   nav ul li {
-    margin-left: 0;
+    margin-left: 20px;
     margin-bottom: 10px;
   }
 
