@@ -2,10 +2,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f4f8; /* Light background color */
 }
 
 header {
-  background-color: #333;
+  background-color: #006400; /* Dark green color */
   color: #fff;
   padding: 1em 0;
 }
@@ -34,9 +35,16 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #004d00; /* Slightly lighter green for hover */
 }
 
 .hero {
+  background-color: #008080; /* Teal color */
   color: #fff;
   padding: 50px 0;
   text-align: center;
@@ -58,6 +66,9 @@ nav ul li a {
 
 .about, .books, .astrology {
   padding: 50px 0;
+  background-color: #fff;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -78,6 +89,7 @@ nav ul li a {
   padding: 16px;
   margin: 16px 0;
   text-align: center;
+  background-color: #f9f9f9;
 }
 
 .book-slide {
@@ -89,23 +101,24 @@ nav ul li a {
 }
 
 footer {
-  background-color: #333;
+  background-color: #006400; /* Dark green color */
   color: #fff;
   text-align: center;
   padding: 1em 0;
 }
 
 button {
-  background-color: #333;
+  background-color: #006400; /* Dark green color */
   color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   margin: 10px;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #004d00; /* Slightly lighter green for hover */
 }
 
 @media (max-width: 768px) {
