@@ -51,6 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
   showBookSlide(currentBookSlide);
   setInterval(nextBookSlide, 3000); // Change slide every 3 seconds
 
+  // Display books in the books section
+  const booksDiv = document.getElementById('books-list');
+  bookImages.forEach((img, index) => {
+    const bookDiv = document.createElement('div');
+    bookDiv.classList.add('book');
+    bookDiv.innerHTML = `
+      <h3>Book Title ${index + 1}</h3>
+      <h4>by Chakra Medical</h4>
+      <img src="${img}" alt="Book Cover ${index + 1}">
+      <p>Book description for book ${index + 1}.</p>
+    `;
+    booksDiv.appendChild(bookDiv);
+  });
+
   // Initialize slider for astrology images
   let currentAstroSlide = 0;
 
