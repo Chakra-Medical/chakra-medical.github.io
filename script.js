@@ -24,36 +24,50 @@ document.addEventListener('DOMContentLoaded', () => {
     "https://i.imgur.com/cuTcJtb.png"
   ];
 
-  const booksDiv = document.getElementById('books-list');
+  // Initialize slider for book images
+  let currentBookSlide = 0;
+
+  function showBookSlide(index) {
+    const slides = document.querySelectorAll('.book-slide');
+    slides.forEach(slide => slide.style.display = 'none');
+    slides[index].style.display = 'block';
+  }
+
+  function nextBookSlide() {
+    currentBookSlide = (currentBookSlide + 1) % bookImages.length;
+    showBookSlide(currentBookSlide);
+  }
+
+  const bookSliderDiv = document.getElementById('book-slider');
   bookImages.forEach((img, index) => {
-    const bookDiv = document.createElement('div');
-    bookDiv.classList.add('book');
-    bookDiv.innerHTML = `
-      <h3>Book Title ${index + 1}</h3>
-      <h4>by Chakra Medical</h4>
+    const slideDiv = document.createElement('div');
+    slideDiv.classList.add('book-slide');
+    slideDiv.innerHTML = `
       <img src="${img}" alt="Book Cover ${index + 1}">
-      <p>Book description for book ${index + 1}.</p>
     `;
-    booksDiv.appendChild(bookDiv);
+    bookSliderDiv.appendChild(slideDiv);
   });
 
-  // Initialize slider for astrology images
-  let currentSlide = 0;
+  showBookSlide(currentBookSlide);
+  setInterval(nextBookSlide, 3000); // Change slide every 3 seconds
 
-  function showSlide(index) {
+  // Initialize slider for astrology images
+  let currentAstroSlide = 0;
+
+  function showAstroSlide(index) {
     const slides = document.querySelectorAll('.astrology-slide');
     slides.forEach(slide => slide.style.display = 'none');
     slides[index].style.display = 'block';
   }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % astrologyImages.length;
-    showSlide(currentSlide);
+  function nextAstroSlide() {
+    currentAstroSlide = (currentAstroSlide + 1) % astrologyImages.length;
+    showAstroSlide(currentAstroSlide);
   }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + astrologyImages.length) % astrologyImages.length;
-    showSlide(currentSlide);
+  function prevAstroSlide() {
+    currentAstroSlide = (currentAstroSlide - 1 + astrologyImages.length) % astrologyImages.length;
+    showAstroSlide(currentAstroSlide);
   }
 
   const astrologyDiv = document.getElementById('astrology-list');
@@ -66,9 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     astrologyDiv.appendChild(astroDiv);
   });
 
-  document.getElementById('nextSlide').addEventListener('click', nextSlide);
-  document.getElementById('prevSlide').addEventListener('click', prevSlide);
+  document.getElementById('nextSlide').addEventListener('click', nextAstroSlide);
+  document.getElementById('prevSlide').addEventListener('click', prevAstroSlide);
 
-  showSlide(currentSlide);
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  showAstroSlide(currentAstroSlide);
+  setInterval(nextAstroSlide, 3000); // Change slide every 3 seconds
 });
