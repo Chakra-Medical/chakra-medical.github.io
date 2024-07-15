@@ -15,6 +15,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 header .logo {
@@ -28,6 +29,7 @@ header .logo {
   border: none;
   padding: 10px 15px;
   cursor: pointer;
+  font-size: 1.5em;
   display: none;
 }
 
@@ -144,12 +146,12 @@ button:hover {
     flex-direction: column;
     align-items: flex-start;
     display: none;
-    background-color: #334462;
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    top: 60px; /* Adjust based on your menu button height */
+    right: 10px;
+    background-color: #334462; /* Match the menu color */
+    width: calc(100% - 20px); /* Adjust based on the padding */
+    padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
@@ -158,7 +160,7 @@ button:hover {
   }
 
   nav ul li {
-    margin-left: 0;
+    margin-left: 20px;
     margin-bottom: 10px;
   }
 
