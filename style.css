@@ -18,11 +18,11 @@ header .container {
 }
 
 header .logo {
-  max-height: 100px;
+  max-height: 250px;
 }
 
 .menu-button {
-  background-color: #334462; /* Exact color from the logo */
+  background-color: #57CBAB; /* Exact color from the logo */
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -57,7 +57,7 @@ nav ul li a:hover {
 }
 
 .hero {
-  background-color: #334462; /* Match hero section as well */
+  background-color: #57CBAB; /* Match hero section as well */
   color: #fff;
   padding: 50px 0;
   text-align: center;
@@ -121,7 +121,7 @@ footer {
 }
 
 button {
-  background-color: #334462; /* Exact color from the logo */
+  background-color: #57CBAB; /* Exact color from the logo */
   color: #fff;
   border: none;
   padding: 10px 20px;
