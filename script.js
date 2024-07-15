@@ -9,16 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     "https://i.imgur.com/rAHTpRc.png"
   ];
 
-  const accentImages = [
-    "https://i.imgur.com/awxPHQO.jpg",
-    "https://i.imgur.com/dtnSewG.jpg",
-    "https://i.imgur.com/cxnKBP2.jpg",
-    "https://i.imgur.com/5hKdtQV.jpg",
-    "https://i.imgur.com/XYDx6Ob.jpg",
-    "https://i.imgur.com/GWmowje.png",
-    "https://i.imgur.com/YDuI4am.png"
-  ];
-
   const astrologyImages = [
     "https://i.imgur.com/B11YtW1.png",
     "https://i.imgur.com/s1OqQZA.png",
@@ -80,4 +70,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('prevSlide').addEventListener('click', prevSlide);
 
   showSlide(currentSlide);
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
 });
