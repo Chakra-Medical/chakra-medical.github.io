@@ -42,7 +42,7 @@ nav ul {
   padding: 0;
   display: flex;
   position: absolute;
-  bottom: -120px; /* Adjust based on your menu height */
+  bottom: -240px; /* Adjust based on your menu height */
   right: 0;
   width: 100%;
   flex-direction: column;
