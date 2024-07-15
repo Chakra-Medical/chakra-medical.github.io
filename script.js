@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const images = [
+  const bookImages = [
     "https://i.imgur.com/BjlKrAG.png",
     "https://i.imgur.com/K9V6ag7.png",
     "https://i.imgur.com/bm26eZ1.png",
     "https://i.imgur.com/w6YTtKf.png",
     "https://i.imgur.com/h6Lau9k.png",
     "https://i.imgur.com/JBGIA6b.png",
-    "https://i.imgur.com/rAHTpRc.png",
+    "https://i.imgur.com/rAHTpRc.png"
+  ];
+
+  const accentImages = [
     "https://i.imgur.com/awxPHQO.jpg",
     "https://i.imgur.com/dtnSewG.jpg",
     "https://i.imgur.com/cxnKBP2.jpg",
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const booksDiv = document.getElementById('books-list');
-  images.forEach((img, index) => {
+  bookImages.forEach((img, index) => {
     const bookDiv = document.createElement('div');
     bookDiv.classList.add('book');
     bookDiv.innerHTML = `
@@ -44,14 +47,37 @@ document.addEventListener('DOMContentLoaded', () => {
     booksDiv.appendChild(bookDiv);
   });
 
+  // Initialize slider for astrology images
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    const slides = document.querySelectorAll('.astrology-slide');
+    slides.forEach(slide => slide.style.display = 'none');
+    slides[index].style.display = 'block';
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % astrologyImages.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + astrologyImages.length) % astrologyImages.length;
+    showSlide(currentSlide);
+  }
+
   const astrologyDiv = document.getElementById('astrology-list');
   astrologyImages.forEach((img, index) => {
     const astroDiv = document.createElement('div');
-    astroDiv.classList.add('astro');
+    astroDiv.classList.add('astrology-slide');
     astroDiv.innerHTML = `
-      <h3>Astrology Image ${index + 1}</h3>
       <img src="${img}" alt="Astrology Image ${index + 1}">
     `;
     astrologyDiv.appendChild(astroDiv);
   });
+
+  document.getElementById('nextSlide').addEventListener('click', nextSlide);
+  document.getElementById('prevSlide').addEventListener('click', prevSlide);
+
+  showSlide(currentSlide);
 });
