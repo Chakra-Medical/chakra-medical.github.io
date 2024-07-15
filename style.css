@@ -18,7 +18,20 @@ header .container {
 }
 
 header .logo {
-  max-height: 200px;
+  max-height: 100px;
+}
+
+.menu-button {
+  background-color: #006400; /* Dark green color */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-button:hover {
+  background-color: #004d00; /* Slightly lighter green for hover */
 }
 
 nav ul {
@@ -122,9 +135,18 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
   }
 
   nav ul li {
