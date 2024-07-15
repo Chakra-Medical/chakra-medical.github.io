@@ -52,18 +52,22 @@ nav ul li a {
   margin: 0 auto;
 }
 
-.about-image, .astro img, .books .book img {
+.about-image, .astrology-slide img, .books .book img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 20px auto;
 }
 
-.books .book, .astrology .astro {
+.books .book, .astrology .astrology-slide {
   border: 1px solid #ccc;
   padding: 16px;
   margin: 16px 0;
   text-align: center;
+}
+
+.astrology-slide {
+  display: none;
 }
 
 footer {
@@ -71,4 +75,17 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1em 0;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #555;
 }
