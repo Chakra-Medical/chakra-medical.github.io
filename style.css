@@ -41,7 +41,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  position: absolute;
+  position: top;
   bottom: -240px; 
   right: 5px;
   width: 100%;
