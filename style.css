@@ -66,14 +66,14 @@ nav ul li a {
   margin: 0 auto;
 }
 
-.about-image, .astrology-slide img, .books .book img {
+.about-image, .astrology-slide img, .books .book img, .book-slide img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 20px auto;
 }
 
-.books .book, .astrology .astrology-slide {
+.books .book, .astrology .astrology-slide, .book-slide {
   border: 1px solid #ccc;
   padding: 16px;
   margin: 16px 0;
